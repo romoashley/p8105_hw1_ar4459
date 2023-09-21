@@ -41,6 +41,7 @@ The pattern seen in the scatter plot is monotonic. The overall pattern is increa
 
 # Problem 2
 ```{r}
+
 data_frame = 
   tibble(
     rand_samp = rnorm (10, mean = 0),
@@ -48,6 +49,7 @@ data_frame =
     char_vec = c("Hello!", "My", "name", "is", "Ashley.", "I", "am", "a", "master", "student"),
     fact_vec = factor(c("low", "low", "high", "moderate", "high", "moderate", "low", "low", "low", "moderate"))
 )
+
 ```
 
 
@@ -74,5 +76,5 @@ mean(as.numeric(pull(data_frame, fact_vec)))
 
 ```
 
-The character vector does not give a mean because the characters cannot be converted to be numerical values.However, the factor vector has three levels that can be converted to numerical values. Therefore, the factor vector provides a mean. The mean value of the factor vector is `r mean(as.numeric(pull(data_frame, fact_vec)))`.  
+The character vector does not give a mean because the characters cannot be converted to be numerical values. However, the factor vector has three levels that can be converted to numerical values. Therefore, the factor vector provides a mean. The mean value of the factor vector is `r mean(as.numeric(pull(data_frame, fact_vec)))`.  
 
