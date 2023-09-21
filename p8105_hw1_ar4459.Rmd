@@ -39,3 +39,13 @@ ggsave("scatter_time_temp.pdf")
 
 The pattern seen in the scatter plot is monotonic. The overall pattern is increasing. There is also a notable change in temperature throughout the day.
 
+# Problem 2
+```{r}
+data_frame = 
+  tibble(
+    rand_samp = rnorm (10, mean = 0),
+    log_vec = rand_samp >- 0,
+    char_vec = c("Hello!", "My", "name", "is", "Ashley.", "I", "am", "a", "master", "student"),
+    fact_vec = factor(c("low", "low", "high", "moderate", "high", "moderate", "low", "low", "low", "moderate"))
+)
+```
