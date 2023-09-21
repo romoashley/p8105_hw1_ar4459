@@ -6,3 +6,9 @@ output: github_document
 ---
 
 
+# Problem 1
+```{r}
+library(tidyverse)
+library(moderndive)
+data("early_january_weather")
+```
