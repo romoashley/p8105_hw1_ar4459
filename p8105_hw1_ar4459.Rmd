@@ -49,3 +49,15 @@ data_frame =
     fact_vec = factor(c("low", "low", "high", "moderate", "high", "moderate", "low", "low", "low", "moderate"))
 )
 ```
+
+
+```{r}
+mean (pull(data_frame, rand_samp))
+mean (pull(data_frame, log_vec))
+mean (pull(data_frame, char_vec))
+mean(pull(data_frame, fact_vec))
+```
+
+Only the random sample and logical vector provide a mean. The mean value of the random sample is `r mean(pull(data_frame, rand_samp))`. The mean value of the logical vector is `r mean(pull(data_frame, log_vec))`. The character and factor vectors do not provide a mean. This is because the character vector only contains characters and not numerical values; similarly, the factor vector has three levels that are not numerical. For example, the factor vector has low, moderate, high categories; it cannot give a mean because the values within each category are not numeric.
+
+
